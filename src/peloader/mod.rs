@@ -4,7 +4,7 @@ pub mod winapi;
 
 use crate::peparser::def::*;
 use crate::peparser::PE;
-use def::{DllMain, DLL_PROCESS_ATTACH, MEM_COMMIT, MEM_RESERVE};
+use def::{DllMain, DLL_THREAD_ATTACH, DLL_PROCESS_ATTACH, MEM_COMMIT, MEM_RESERVE};
 use error::{Error, Result};
 use std::ffi::CStr;
 use std::mem;
