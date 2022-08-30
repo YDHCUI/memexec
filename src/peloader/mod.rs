@@ -178,7 +178,7 @@ unsafe fn call_tls_callback(pe: &PE, base_addr: *const c_void) -> Result<()> {
 
             mem::transmute::<*const c_void, PIMAGE_TLS_CALLBACK>(*tls_callback_addr)(
                 base_addr,
-                DLL_PROCESS_ATTACH,
+                DLL_THREAD_ATTACH,
                 0 as _,
             );
             tls_callback_addr = tls_callback_addr.offset(1);
